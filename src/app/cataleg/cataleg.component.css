@@ -1,0 +1,24 @@
+
+.producte{
+  float: left;
+  color: white;
+  width: 350px
+}
+
+.img\.pro{
+  height: 50%;
+  width: 50%;
+}
+
+.BotoCompra{
+  width: 10%;
+  height: 30px;
+}
+
+.BotoCompra:hover{
+  background-color: green;
+}
+
+.BotoCompra:focus {
+  background-color: green;
+}

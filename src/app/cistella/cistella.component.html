@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Cistella</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+</head>
+<body>
+<header>
+  <a href="Home.html"><img id="title" src="assets/images/LogoWeb2.png"></a>
+</header>
+<nav id="menu">
+  <a href="Home.html">Home</a>
+  <a href="Cataleg.html">Catàleg</a>
+  <a href="Register.html">Registre Client</a>
+  <a href="Cistella.html">Cistella</a>
+  <a href="Condicions.html">Condicions</a>
+  <a href="Contact.html">Contacte</a>
+</nav>
+<div class="respmenu">
+  <input type="checkbox">
+  <i class="fas fa-bars"></i>
+  <i class="fas fa-times"></i>
+  <nav>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Cataleg.html">Catàleg</a></li>
+      <li><a href="Register.html">Registre Client</a></li>
+      <li><a href="Cistella.html">Cistella</a></li>
+      <li><a href="Condicions.html">Condicions</a></li>
+      <li><a href="Contact.html">Contacte</a></li>
+    </ul>
+  </nav>
+</div>
+<hr>
+</body>
+<article>
+  <div class="producte">
+    <img src="../MEDIA/BolaDeDrac01.jpg" class="img.pro">
+    <h3>Bola de drac <br> Primera edicio</h3>
+    <h4>Preu: 10,30€</h4>
+  </div>
+
+  <div class="producte">
+    <img src="../MEDIA/Narnia.jpg" class="img.pro">
+    <h3>Narnia <br> Primera edicio</h3>
+    <h4>Preu: 11,30€</h4>
+  </div>
+
+</article>
+<aside>
+  <label for="nom">Nom:</label><br>
+  <input type="text" id="nom" name="nom">
+  <br>
+  <label for="cognom">Cognom:</label><br>
+  <input type="text" id="cognom" name="cognom">
+  <br>
+  <label for="adreç">Adreça:</label><br>
+  <input type="text" id="adreç" name="adreç">
+  <br>
+  <label for="TarC">Numero arjeta de credit:</label><br>
+  <input type="text" id="TarC" name="TarC">
+  <br>
+  <label for="caduca">Data caducacio tarjeta:</label><br>
+  <input type="date" id="caduca" name="Caduca">
+  <br>
+  <label>Tria el tpius d'enviament:</label><br>
+  <input type="radio" id="opcio1" name="enviament" value="Normal">
+  <label for="opcio1">Normal</label><br>
+  <input type="radio" id="opcio2" name="enviament" value="Urgent">
+  <label for="opcio2">Urgent</label><br>
+  <input type="radio" id="opcio3" name="enviament" value="En el mateix dia">
+  <label for="opcio3">En el mateix dia</label>
+  <h3>Preu total:</h3>
+  <h2>21,6 €</h2>
+  <button type="button" onclick="alert('Compra completada correctament')"><b>Finalitza Compra</b></button>
+</aside>
+<footer>
+  <iframe src="assets/html/Footer.html"></iframe>
+</footer>
+</html>

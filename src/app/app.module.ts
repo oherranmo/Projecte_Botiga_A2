@@ -5,12 +5,20 @@ import { AppComponent } from './app.component';
 import { RegistreComponent } from './registre/registre.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ContacteComponent } from './contacte/contacte.component';
+import { IniciComponent } from './inici/inici.component';
+import { CatalegComponent } from './cataleg/cataleg.component';
+import { CistellaComponent } from './cistella/cistella.component';
+import { CondicionsComponent } from './condicions/condicions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistreComponent,
-    ContacteComponent
+    ContacteComponent,
+    IniciComponent,
+    CatalegComponent,
+    CistellaComponent,
+    CondicionsComponent
   ],
   imports: [
     BrowserModule,
