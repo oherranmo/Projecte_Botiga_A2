@@ -39,13 +39,12 @@
   <form>
     <div class="inputDiv">
       <label for="correu"><b>Correu</b></label>
-      <input [(ngModel)]="email" type="email" id="correu" placeholder="Correu electrònic" required/>
+      <input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" type="email" id="correu" placeholder="Correu electrònic" required/>
     </div>
     <div class="inputDiv">
       <label for="contrasenya"><b>Contrasenya</b></label>
-      <input [(ngModel)]="passwd" type="password" id="contrasenya" placeholder="Contrasenya" required>
+      <input [(ngModel)]="passwd" [ngModelOptions]="{standalone: true}" type="password" id="contrasenya" placeholder="Contrasenya" required>
     </div>
-
     <button type="submit" (click)="autenticar()">Iniciar sessio</button>
     <button type="reset">Neteja</button>
 
