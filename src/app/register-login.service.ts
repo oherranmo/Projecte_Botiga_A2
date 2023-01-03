@@ -8,8 +8,8 @@ export class RegisterLoginService {
   public passwd : String;
 
   constructor() {
-    this.username = ' ';
-    this.passwd = ' ';
+    this.username =' ';
+    this.passwd =' ';
 
   }
 }
