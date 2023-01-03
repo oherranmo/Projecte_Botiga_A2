@@ -1,12 +1,18 @@
 *{
     background-color: black;
 }
+#login{
+  display: inline-flex;
+  float: right;
+  margin-right: 30px;
+  color: orange;
+}
 .respmenu{
     display: none;
 }
 #title {
     width: 40%;
-    display:block;
+  display: block;
     margin: auto;
 }
 #menu {
