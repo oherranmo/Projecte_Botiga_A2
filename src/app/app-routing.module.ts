@@ -6,6 +6,7 @@ import { RegistreComponent } from './registre/registre.component';
 import { CistellaComponent } from './cistella/cistella.component';
 import {CondicionsComponent} from "./condicions/condicions.component";
 import {ContacteComponent} from "./contacte/contacte.component";
+import {LoginComponent} from "./login/login.component";
 
 const routes: Routes = [
 
@@ -21,6 +22,8 @@ const routes: Routes = [
     component: CondicionsComponent },
   { path: 'contacte',
     component: ContacteComponent },
+  { path: 'login',
+    component: LoginComponent },
 
 
 ];

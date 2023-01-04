@@ -9,6 +9,8 @@ import { IniciComponent } from './inici/inici.component';
 import { CatalegComponent } from './cataleg/cataleg.component';
 import { CistellaComponent } from './cistella/cistella.component';
 import { CondicionsComponent } from './condicions/condicions.component';
+import { LoginComponent } from './login/login.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { CondicionsComponent } from './condicions/condicions.component';
     IniciComponent,
     CatalegComponent,
     CistellaComponent,
-    CondicionsComponent
+    CondicionsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
