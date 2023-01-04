@@ -5,11 +5,13 @@
   <title>Cataleg</title>
   <link rel="stylesheet" href="cataleg.component.css">
   <link rel="stylesheet" href="../../assets/css/Default.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
 </head>
 <body>
 <header>
-  <a routerLink="/" routerLinkActive="active"><img id="title" src="../../assets/images/LogoWeb2.png"></a>
+  <a routerLink="/" routerLinkActive="active"><img id="title" src="../../assets/images/LogoWeb2.png" alt=""></a>
 </header>
 <nav id="menu">
   <a routerLink="/" routerLinkActive="active">Home</a>
@@ -35,66 +37,120 @@
   </nav>
 </div>
 <hr>
-<article>
+<article class="cataleg" id="cataleg">
+
   <div class="producte">
-    <img src="../../assets/images/BolaDeDrac01.jpg" class="img.pro">
-    <h3>Bola de drac <br> Primera edicio</h3>
-    <h4>Preu: 10,30€</h4>
-    <input type="image" src="../../assets/images/CarritoSimbolo2.png" class="BotoCompra"/>
+    <img width="220" src="../../assets/images/BolaDeDrac01.jpg" class="img.pro" alt="">
+    <div class="info.pro">
+      <h3>Bola de drac <br> Primera edicio</h3>
+      <div class="preu-quantitat">
+        <h2>Preu: 10,30€</h2>
+        <div class="BotoCompra">
+          <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="producte">
-    <img src="../../assets/images/Narnia.jpg" class="img.pro">
-    <h3>Narnia <br> Primera edicio</h3>
-    <h4>Preu: 11,30€</h4>
-    <input type="image" src="../../assets/images/CarritoSimbolo2.png" class="BotoCompra"/>
+    <img width="220" src="../../assets/images/Narnia.jpg" class="img.pro" alt="">
+    <div class="info.pro">
+      <h3>Narnia <br> Primera edicio</h3>
+      <div class="preu-quantitat">
+        <h2>Preu: 11,30€</h2>
+        <div class="BotoCompra">
+          <i class="bi bi-cart-plus"></i>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="producte">
-    <img src="../../assets/images/BNHA.png" class="img.pro">
-    <h3>Boku no Hero Academia <br> Primera edicio</h3>
-    <h4>Preu: 7,55€</h4>
-    <input type="image" src="../../assets/images/CarritoSimbolo2.png" class="BotoCompra"/>
+    <img width="220" src="../../assets/images/BNHA.png" class="img.pro" alt="">
+    <div class="info.pro">
+      <h3>Boku no Hero Academia <br> Primera edició</h3>
+      <div class="preu-quantitat">
+        <h2>Preu: 7,55€</h2>
+        <div class="BotoCompra">
+          <i class="bi bi-cart-plus"></i>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="producte">
-    <img src="../../assets/images/PilaresTierra.png" class="img.pro">
-    <h3>Los pilares de la Tierra <br> Primer edicio</h3>
-    <h4>Preu: 11,30€</h4>
-    <input type="image" src="../../assets/images/CarritoSimbolo2.png" class="BotoCompra"/>
+    <img width="220" src="../../assets/images/PilaresTierra.png" class="img.pro" alt="">
+    <div class="info.pro">
+      <h3>Los pilares de la Tierra <br> Primera edicio</h3>
+      <div class="preu-quantitat">
+        <h2>Preu: 11,30€</h2>
+        <div class="BotoCompra">
+          <i class="bi bi-cart-plus"></i>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="producte">
-    <img src="../../assets/images/GuiaMine.png" class="img.pro">
-    <h3>Guia Basica de Minecraft</h3>
-    <h4>Preu: 15,89€</h4>
-    <input type="image" src="../../assets/images/CarritoSimbolo2.png" class="BotoCompra"/>
+    <img width="220" src="../../assets/images/GuiaMine.png" class="img.pro" alt="">
+    <div class="info.pro">
+      <h3>Guia Basica de Minecraft</h3>
+      <div class="preu-quantitat">
+        <h2>Preu: 15,89€</h2>
+        <div class="BotoCompra">
+          <i class="bi bi-cart-plus"></i>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="producte">
-    <img src="../../assets/images/LlibreCuina.png" class="img.pro">
-    <h3>La cocina de la abuela</h3>
-    <h4>Preu: 18,30€</h4>
-    <input type="image" src="../../assets/images/CarritoSimbolo2.png" class="BotoCompra"/>
+    <img width="220" src="../../assets/images/LlibreCuina.png" class="img.pro" alt="">
+    <div class="info.pro">
+      <h3>La cocina de la abuela</h3>
+      <div class="preu-quantitat">
+        <h2>Preu: 18,30€</h2>
+        <div class="BotoCompra">
+          <i class="bi bi-cart-plus"></i>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="producte">
-    <img src="../../assets/images/SeñorAnillos.jpg" class="img.pro">
-    <h3>El señor de los anillos <br> Primera Edicio</h3>
-    <h4>Preu: 17,95€</h4>
-    <input type="image" src="../../assets/images/CarritoSimbolo2.png" class="BotoCompra"/>
+    <img width="220" src="../../assets/images/SeñorAnillos.jpg" class="img.pro" alt="">
+    <div class="info.pro">
+      <h3>El señor de los anillos <br> Primera edicio</h3>
+      <div class="preu-quantitat">
+        <h2>Preu: 17,95€</h2>
+        <div class="BotoCompra">
+          <i class="bi bi-cart-plus"></i>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="producte">
-    <img src="../../assets/images/ComoIncendiar.jpg" class="img.pro">
-    <h3>Como provocar un incendio</h3>
-    <h4>Preu: 9,49€</h4>
-    <input type="image" src="../../assets/images/CarritoSimbolo2.png" class="BotoCompra"/>
+    <img width="220" src="../../assets/images/ComoIncendiar.jpg" class="img.pro" alt="">
+    <div class="info.pro">
+      <h3>Como provocar un incendio</h3>
+      <div class="preu-quantitat">
+        <h2>Preu: 9,49€</h2>
+        <div class="BotoCompra">
+          <i class="bi bi-cart-plus"></i>
+        </div>
+      </div>
+    </div>
   </div>
 
 </article>
 <footer>
   <iframe src="../../assets/html/Footer.html"></iframe>
 </footer>
+<script>
+  function myFunction(x) {
+    x.classList.toggle("fa-thumbs-down");
+  }
+</script>
 </body>
 </html>

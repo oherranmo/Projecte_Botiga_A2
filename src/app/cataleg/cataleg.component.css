@@ -1,23 +1,54 @@
-.producte{
-  float: left;
-  color: white;
-  width: 350px
+.cataleg{
+  display: grid;
+  grid-template-columns: repeat(4, 223px);
+  gap: 30px;
+  justify-content: center;
 }
 
-.img\.pro{
-  height: 50%;
-  width: 50%;
+@media (max-width: 1000px){
+  .cataleg{
+    grid-template-columns: repeat(2, 223px);
+  }
+}
+
+@media (max-width: 500px){
+  .cataleg{
+    grid-template-columns: repeat(1, 223px);
+  }
+}
+
+.producte{
+  color: white;
+}
+
+.info\.pro{
+  display: flex;
+  flex-direction: column;
+}
+
+.preu-quantitat{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .BotoCompra{
-  width: 10%;
-  height: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }
 
 .BotoCompra:hover{
-  background-color: green;
+  color:green;
 }
 
-.BotoCompra:focus {
-  background-color: green;
+.bi-cart-plus{
+  font-size: 26px;
+  text-align: center;
+}
+
+i.fa{
+  cursor: pointer;
+  user-select: none;
 }
