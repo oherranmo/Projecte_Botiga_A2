@@ -48,7 +48,6 @@
   text-align: center;
 }
 
-i.fa{
+i{
   cursor: pointer;
-  user-select: none;
 }

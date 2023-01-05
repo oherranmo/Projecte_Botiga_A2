@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-cataleg',
@@ -6,14 +6,14 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./cataleg.component.css','../../assets/css/Default.css']
 })
 
-export class CatalegComponent implements OnInit {
+export class CatalegComponent {
   constructor() {
-  }
 
-  ngOnInit() {
-    let cataleg = document.getElementById("cataleg")
-    console.log(cataleg);
-
-    let generarCataleg =()=>{}
   }
 }
+/**
+  ngOnInit() {
+
+  }
+}
+**/

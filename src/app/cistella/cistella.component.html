@@ -38,7 +38,8 @@
 <hr>
 </body>
 <article>
-
+  <div id="text" class="text-centrat"></div>
+  <div class="llista-productes" id="llista-productes"></div>
 </article>
 <aside>
   <label for="nom">Nom:</label><br>
@@ -68,6 +69,31 @@
   <button type="button" onclick="alert('Compra completada correctament')"><b>Finalitza Compra</b></button>
 </aside>
 <footer>
-  <iframe src="assets/html/Footer.html"></iframe>
+  <iframe src="../../assets/html/Footer.html"></iframe>
 </footer>
+<script type="text/javascript">
+  let text = document.getElementById("text")
+  let llistaProductes = document.getElementById("llista-productes");
+
+  let cistella = JSON.parse(localStorage.getItem("data")) || [];
+  console.log(cistella);
+
+  let ItemsCistella = () => {
+    if(cistella.length !== 0){
+
+    }
+
+    else{
+      llistaProductes.innerHTML = ``
+      text.innerHTML = `
+      <h2>La cistella es buida</h2>
+      <a href="../cataleg/cataleg.component.html>
+        <button class="Retorn">Torna al cataleg</button>
+        </a>`
+    }
+  }
+
+  ItemsCistella();
+
+</script>
 </html>

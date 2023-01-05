@@ -14,7 +14,7 @@
   <a routerLink="/" routerLinkActive="active"><img id="title" src="../../assets/images/LogoWeb2.png" alt=""></a>
 </header>
 <nav id="menu">
-  <a routerLink="/" routerLinkActive="active">Home</a>
+  <a routerLink="../inici/inici.html" routerLinkActive="active">Home</a>
   <a routerLink="/cataleg" routerLinkActive="active">Catàleg</a>
   <a routerLink="/registre" routerLinkActive="active">Registre Client</a>
   <a routerLink="/cistella" routerLinkActive="active">Cistella</a>
@@ -38,119 +38,115 @@
 </div>
 <hr>
 <article class="cataleg" id="cataleg">
-
-  <div class="producte">
-    <img width="220" src="../../assets/images/BolaDeDrac01.jpg" class="img.pro" alt="">
-    <div class="info.pro">
-      <h3>Bola de drac <br> Primera edicio</h3>
-      <div class="preu-quantitat">
-        <h2>Preu: 10,30€</h2>
-        <div class="BotoCompra">
-          <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="producte">
-    <img width="220" src="../../assets/images/Narnia.jpg" class="img.pro" alt="">
-    <div class="info.pro">
-      <h3>Narnia <br> Primera edicio</h3>
-      <div class="preu-quantitat">
-        <h2>Preu: 11,30€</h2>
-        <div class="BotoCompra">
-          <i class="bi bi-cart-plus"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="producte">
-    <img width="220" src="../../assets/images/BNHA.png" class="img.pro" alt="">
-    <div class="info.pro">
-      <h3>Boku no Hero Academia <br> Primera edició</h3>
-      <div class="preu-quantitat">
-        <h2>Preu: 7,55€</h2>
-        <div class="BotoCompra">
-          <i class="bi bi-cart-plus"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="producte">
-    <img width="220" src="../../assets/images/PilaresTierra.png" class="img.pro" alt="">
-    <div class="info.pro">
-      <h3>Los pilares de la Tierra <br> Primera edicio</h3>
-      <div class="preu-quantitat">
-        <h2>Preu: 11,30€</h2>
-        <div class="BotoCompra">
-          <i class="bi bi-cart-plus"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="producte">
-    <img width="220" src="../../assets/images/GuiaMine.png" class="img.pro" alt="">
-    <div class="info.pro">
-      <h3>Guia Basica de Minecraft</h3>
-      <div class="preu-quantitat">
-        <h2>Preu: 15,89€</h2>
-        <div class="BotoCompra">
-          <i class="bi bi-cart-plus"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="producte">
-    <img width="220" src="../../assets/images/LlibreCuina.png" class="img.pro" alt="">
-    <div class="info.pro">
-      <h3>La cocina de la abuela</h3>
-      <div class="preu-quantitat">
-        <h2>Preu: 18,30€</h2>
-        <div class="BotoCompra">
-          <i class="bi bi-cart-plus"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="producte">
-    <img width="220" src="../../assets/images/SeñorAnillos.jpg" class="img.pro" alt="">
-    <div class="info.pro">
-      <h3>El señor de los anillos <br> Primera edicio</h3>
-      <div class="preu-quantitat">
-        <h2>Preu: 17,95€</h2>
-        <div class="BotoCompra">
-          <i class="bi bi-cart-plus"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="producte">
-    <img width="220" src="../../assets/images/ComoIncendiar.jpg" class="img.pro" alt="">
-    <div class="info.pro">
-      <h3>Como provocar un incendio</h3>
-      <div class="preu-quantitat">
-        <h2>Preu: 9,49€</h2>
-        <div class="BotoCompra">
-          <i class="bi bi-cart-plus"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </article>
 <footer>
   <iframe src="../../assets/html/Footer.html"></iframe>
 </footer>
-<script>
-  function myFunction(x) {
-    x.classList.toggle("fa-thumbs-down");
-  }
+<script type="text/javascript"> /** Recomano minimitzar o comprimir els altres apartats per veure millor aquest **/
+  let cataleg = document.getElementById("cataleg");
+
+  infoProductes = [
+    {
+    id:"llibre1",
+    name:"Bola de drac",
+    desc:"Primera edicio",
+    preu: 10.30,
+    img: "../../assets/images/BolaDeDrac01.jpg"
+    },
+    {
+      id:"llibre2",
+      name:"Narnia",
+      desc:"Primera edicio",
+      preu: 11.30,
+      img: "../../assets/images/Narnia.jpg"
+    },
+    {
+      id:"llibre3",
+      name:"Boku no Hero Academia",
+      desc:"Primera edicio",
+      preu: 7.55,
+      img: "../../assets/images/BNHA.png"
+    },
+    {
+      id:"llibre4",
+      name:"Los pilares de la Tierra",
+      desc:"Primera edicio",
+      preu: 11.30,
+      img: "../../assets/images/PilaresTierra.png"
+    },
+     {
+       id:"llibre5",
+       name:"Guia Basica de Minecraft",
+       desc:"",
+       preu: 15.89,
+       img: "../../assets/images/GuiaMine.png"
+     },
+     {
+       id:"llibre6",
+       name:"La cocina de la abuelaa",
+       desc:"",
+       preu: 18.30,
+       img: "../../assets/images/LlibreCuina.png"
+     },
+     {
+       id:"llibre7",
+       name:"El señor de los anillos",
+       desc:"Primera edicio",
+       preu: 17.95,
+       img: "../../assets/images/SeñorAnillos.jpg"
+     },
+     {
+       id:"llibre4",
+       name:"Como provocar un incendio",
+       desc:"",
+       preu: 9.49,
+       img: "../../assets/images/ComoIncendiar.jpg"
+     }];
+
+  let cistella = JSON.parse(localStorage.getItem("data")) || []
+
+  let generarCataleg = () => {
+    return (cataleg.innerHTML = infoProductes
+      .map((x)=>{
+        let {id,name,preu,desc,img } = x;
+      return `
+    <div id=producte-id-${id} class="producte">
+    <img width="220" src=${img} class="img.pro" alt="">
+    <div class="info.pro">
+      <h3>${name} <br> ${desc} </h3>
+      <div class="preu-quantitat">
+        <h2>Preu: ${preu} €</h2>
+        <div class="BotoCompra">
+          <i onclick="afegir(${id})" class="bi bi-cart-plus"></i>
+          <div id=${id} class="quantitat"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+    `;
+    }).join(""));
+  };
+
+  generarCataleg();
+
+  let afegir = (id) => {
+    let producteTriat = id;
+    let busqueda = cistella.find((x) => x.id === producteTriat.id);
+
+    if(busqueda === undefined){
+      cistella.push({
+        id: producteTriat.id,
+        item: 1,
+      });
+    }
+    else{
+      busqueda.item += 1;
+    }
+    localStorage.setItem("data", JSON.stringify(cistella))
+    console.log(cistella);
+  };
+
+
 </script>
 </body>
 </html>
