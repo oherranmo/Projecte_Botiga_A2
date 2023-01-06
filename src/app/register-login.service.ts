@@ -6,11 +6,11 @@ import {EmailValidator} from "@angular/forms";
 })
 export class RegisterLoginService {
   //@ts-ignore
-  public correu_array : String[];
+  public correu_array : Array<String>=[];
   //@ts-ignore
-  public passwd_array : String[];
+  public passwd_array : Array<String>=[];
   //@ts-ignore
-  public nom_array : String[];
+  public nom_array : Array<String>=[];
 
 
 }

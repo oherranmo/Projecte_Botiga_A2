@@ -12,10 +12,13 @@ export class RegistreComponent {
   passwd: any;
   nom: any;
   registrar(){
-    console.log(this.correu)
+    this.registraServei.correu_array.push(this.correu)
+    this.registraServei.passwd_array.push(this.passwd)
+    this.registraServei.nom_array.push(this.nom)
+
+
   }
   constructor(private registraServei: RegisterLoginService) {
-
   }
 
   ngOnInit(){}
