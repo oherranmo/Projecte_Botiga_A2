@@ -17,22 +17,23 @@ export class LoginComponent {
     let posicio = 0;
     for(let i = 0; i <= this.registraServei.correu_array.length; i++ ){
       if (this.registraServei.correu_array[i]==this.email){
-        console.log("Sha trobat a la posicio ",i)
+
         trobat = true;
         posicio = i
       }
     }
     if (trobat == false){
-      console.log("no continuis")
+      alert("Usuari o contrasenya incorrectes")
+
     }
     else if (trobat == true){
       if(this.registraServei.passwd_array[posicio]==this.passwd){
-        console.log("Usuari autenticat")
         this.registraServei.autenticat = true;
         this.registraServei.nomAutenticat = this.registraServei.nom_array[posicio];
         this.router.navigate(['/'])
 
       }
+      else alert("Usuari o contrasenya incorrectes")
     }
 
 

@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {RegisterLoginService} from "../register-login.service";
 
 @Component({
   selector: 'app-cataleg',
@@ -7,13 +8,18 @@ import {Component} from '@angular/core';
 })
 
 export class CatalegComponent {
-  constructor() {
+  autenticat = this.registraServei.autenticat
+  nomAutenticat = this.registraServei.nomAutenticat
 
+  tancarSessio(){
+    this.registraServei.autenticat = false;
+    this.registraServei.nomAutenticat = 'null';
+    this.autenticat= false;
+    this.nomAutenticat= 'null';
+    console.log("funciona clic")
   }
-}
-/**
-  ngOnInit() {
 
+  constructor(private registraServei: RegisterLoginService) {
   }
+
 }
-**/

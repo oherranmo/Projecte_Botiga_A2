@@ -11,6 +11,17 @@ export class RegistreComponent {
   correu: any;
   passwd: any;
   nom: any;
+  autenticat = this.registraServei.autenticat
+  nomAutenticat = this.registraServei.nomAutenticat
+
+  tancarSessio(){
+    this.registraServei.autenticat = false;
+    this.registraServei.nomAutenticat = 'null';
+    this.autenticat= false;
+    this.nomAutenticat= 'null';
+    console.log("funciona clic")
+  }
+
   registrar(){
     let trobat = false;
     for(let i = 0; i <= this.registraServei.correu_array.length; i++ ){

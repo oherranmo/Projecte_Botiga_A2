@@ -9,7 +9,10 @@
 <header>
   <div id="loginbar">
     <a *ngIf="!autenticat" class="ab-item" id="login" routerLink="/login" routerLinkActive="active">Inicia la sessió</a>
-    <a *ngIf="autenticat" class="ab-item" id="login">Hola,{{nomAutenticat}}</a>
+    <select *ngIf="autenticat" name="logout" id="logout">
+      <option selected hidden>Hola, {{nomAutenticat}}</option>
+      <option (click)="tancarSessio()">Tancar sessió</option>
+    </select>
   </div>
   <a routerLink="/" routerLinkActive="active"><img id="title" src="assets/images/LogoWeb2.png"></a>
 

@@ -3,7 +3,7 @@
 }
 #loginbar{
   height: 36px;
-  position: fixed;
+  position: absolute;
   direction: ltr;
   top: 0;
   left: 0;
@@ -13,7 +13,8 @@
 #login{
   display: inline-flex;
   float: right;
-  margin-right: 30px;
+  margin-top: 20px;
+  margin-right: 20px;
   color: orange;
 }
 .respmenu{
@@ -50,6 +51,25 @@
 hr{
   color: #dd801b;
 }
+
+#logout{
+  float:right;
+  margin-right: 20px;
+  margin-top: 20px;
+  border-color: transparent;
+  color:orange;
+
+}
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 702px){
   #menu {
     display: none;

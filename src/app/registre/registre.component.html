@@ -7,6 +7,13 @@
 </head>
 <body>
 <header>
+  <div id="loginbar">
+    <a *ngIf="!autenticat" class="ab-item" id="login" routerLink="/login" routerLinkActive="active">Inicia la sessió</a>
+    <select *ngIf="autenticat" name="logout" id="logout">
+      <option selected hidden>Hola, {{nomAutenticat}}</option>
+      <option (click)="tancarSessio()">Tancar sessió</option>
+    </select>
+  </div>
   <a routerLink="/" routerLinkActive="active"><img id="title" src="assets/images/LogoWeb2.png"></a>
 </header>
 <nav id="menu">
@@ -37,7 +44,7 @@
 <h1>Registra't</h1>
 
 <div id="formulari">
-  <form>
+  <form (submit)="registrar()"  ngNativeValidate>
     <div class="inputDiv">
       <label for="nom"><b>Nom</b></label>
       <input [(ngModel)]="nom" [ngModelOptions]="{standalone: true}" type="text" id="nom" placeholder="Nom" required>
@@ -65,10 +72,10 @@
 
     <div class="inputDiv">
       <label for="telefon"><b>Telèfon</b></label>
-      <input type="tel" id="telefon" placeholder="Telèfon" required>
+      <input type="tel" id="telefon" placeholder="Telèfon" pattern="[0-9]{9}" required>
     </div>
 
-    <button type="submit" (click)="registrar()" >Registra't</button>
+    <button type="submit" >Registra't</button>
     <button type="reset">Neteja</button>
 
   </form>
