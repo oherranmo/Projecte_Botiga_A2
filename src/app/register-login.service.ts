@@ -13,6 +13,13 @@ export class RegisterLoginService {
   public passwd_array : Array<String>=[];
   //@ts-ignore
   public nom_array : Array<String>=[];
+  //@ts-ignore
+  public cognoms_array : Array<String>=[];
+  //@ts-ignore
+  public adreca_array : Array<String>=[];
+  //@ts-ignore
+  public tel_array : Array<number>=[];
+
 
 
 

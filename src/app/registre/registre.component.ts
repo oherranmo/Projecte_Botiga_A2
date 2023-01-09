@@ -11,6 +11,10 @@ export class RegistreComponent {
   correu: any;
   passwd: any;
   nom: any;
+  cognoms: any;
+  adreca: any;
+  telefon: any;
+
   autenticat = this.registraServei.autenticat
   nomAutenticat = this.registraServei.nomAutenticat
 
@@ -19,7 +23,6 @@ export class RegistreComponent {
     this.registraServei.nomAutenticat = 'null';
     this.autenticat= false;
     this.nomAutenticat= 'null';
-    console.log("funciona clic")
   }
 
   registrar(){
@@ -35,6 +38,10 @@ export class RegistreComponent {
     this.registraServei.correu_array.push(this.correu)
     this.registraServei.passwd_array.push(this.passwd)
     this.registraServei.nom_array.push(this.nom)
+    this.registraServei.cognoms_array.push(this.cognoms)
+    this.registraServei.adreca_array.push(this.adreca)
+    this.registraServei.tel_array.push(this.telefon)
+
     this.router.navigate(['/login'])
     }
 
