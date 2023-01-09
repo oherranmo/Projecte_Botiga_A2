@@ -21,10 +21,12 @@
   display: flex;
   flex-direction: row;
   color:white;
+  border-collapse: collapse;
+  border-color: white;
 }
 
 .BotoCompra:hover{
   color:green;
-
+  border-color: green;
 }
 

@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {RegisterLoginService} from "../register-login.service";
-import {ActivatedRoute} from "@angular/router";
 import { Product, products } from '../products';
 import { CartService } from '../cistella.service';
 

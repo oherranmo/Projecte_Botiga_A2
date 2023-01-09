@@ -49,10 +49,10 @@
    <p>No tents cap producte.<a routerLink="/cataleg">Torna al cataleg</a></p>
   </h4>
 
-  <div class="producte" *ngFor="let item of items">
+  <div class="producte" *ngFor="let item of items; let i = index">
     <img src="{{item.img}}" alt="" class="img-pro"> <br>
     <h3>{{ item.name }} <br> {{item.preu}} € </h3>
-    <button (click)="delete(item)">DELETE</button>
+    <button (click)="delete(i)">DELETE</button>
   </div>
 
 </article>
@@ -83,7 +83,7 @@
   <input type="radio" id="opcio3" name="enviament" value="En el mateix dia">
   <label for="opcio3">En el mateix dia</label>
   <h3>Preu total:</h3>
-  <h2>00,00 €</h2>
+  <h2> 0 €</h2>
   <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
     <button class="button" type="submit">Finalitzar compra</button>
   </form>

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {RegisterLoginService} from "../register-login.service";
 import { FormBuilder } from '@angular/forms';
 import { CartService } from '../cistella.service';
-import {Observable, Subject} from "rxjs";
+
 
 @Component({
   selector: 'app-cistella',
@@ -10,13 +10,9 @@ import {Observable, Subject} from "rxjs";
   styleUrls: ['./cistella.component.css','../../assets/css/Default.css']
 })
 export class CistellaComponent {
-  deleteItem$ = new Subject<{ id: string }>();
   items = this.cartService.getItems();
 
-  checkoutForm = this.formBuilder.group({
-    name: '',
-    address: '',
-  });
+  checkoutForm = this.formBuilder.group({});
 
   autenticat = this.registraServei.autenticat
   nomAutenticat = this.registraServei.nomAutenticat
@@ -41,7 +37,7 @@ export class CistellaComponent {
     console.warn('Your order has been submitted', this.checkoutForm.value);
     this.checkoutForm.reset();
   }
-  delete(item: any) {
-    this.deleteItem$.next({ id: item.id });
-    }
+  delete(index: number) {
+    this.cartService.removeItem(index);
+  }
 }

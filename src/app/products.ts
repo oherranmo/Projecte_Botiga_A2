@@ -44,7 +44,7 @@ export const products= [
   },
   {
     id: 6,
-    name:"La cocina de la abuelaa",
+    name:"La cocina de la abuela",
     desc:"",
     preu: 18.30,
     img: "assets/images/LlibreCuina.png"
