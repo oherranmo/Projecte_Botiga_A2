@@ -30,6 +30,10 @@ export class LoginComponent {
       if(this.registraServei.passwd_array[posicio]==this.passwd){
         this.registraServei.autenticat = true;
         this.registraServei.nomAutenticat = this.registraServei.nom_array[posicio];
+        this.registraServei.correuAutenticat = this.registraServei.correu_array[posicio];
+        this.registraServei.adrecaAutenticat = this.registraServei.adreca_array[posicio];
+        this.registraServei.cognomsAutenticat = this.registraServei.cognoms_array[posicio];
+        this.registraServei.telAutenticat = this.registraServei.tel_array[posicio];
         this.router.navigate(['/'])
 
       }

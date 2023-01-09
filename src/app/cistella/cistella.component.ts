@@ -20,6 +20,8 @@ export class CistellaComponent {
 
   autenticat = this.registraServei.autenticat
   nomAutenticat = this.registraServei.nomAutenticat
+  cognomsAutenticat = this.registraServei.cognomsAutenticat
+  adrecaAutenticat = this.registraServei.adrecaAutenticat
 
   tancarSessio(){
     this.registraServei.autenticat = false;

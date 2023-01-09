@@ -58,13 +58,16 @@
 </article>
 <aside>
   <label for="nom">Nom:</label><br>
-  <input type="text" id="nom" name="nom">
+  <input *ngIf="!autenticat" type="text" id="nom" name="nom">
+  <input *ngIf="autenticat" type="text" id="nom" name="nom" value="{{this.nomAutenticat}}">
   <br>
   <label for="cognom">Cognom:</label><br>
-  <input type="text" id="cognom" name="cognom">
+  <input *ngIf="!autenticat" type="text" id="cognom" name="cognom">
+  <input *ngIf="autenticat" type="text" id="cognom" name="cognom" value="{{this.cognomsAutenticat}}">
   <br>
   <label for="adreç">Adreça:</label><br>
-  <input type="text" id="adreç" name="adreç">
+  <input *ngIf="!autenticat" type="text" id="adreç" name="adreç">
+  <input *ngIf="autenticat" type="text" id="adreç" name="adreç" value="{{this.adrecaAutenticat}}">
   <br>
   <label for="TarC">Numero arjeta de credit:</label><br>
   <input type="text" id="TarC" name="TarC">
