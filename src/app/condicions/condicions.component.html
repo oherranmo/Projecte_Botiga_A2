@@ -8,6 +8,7 @@
 <body>
 <header>
   <div id="loginbar">
+    <button (click)="canviarFons()">☀ / 🌙</button>
     <a *ngIf="!autenticat" class="ab-item" id="login" routerLink="/login" routerLinkActive="active">Inicia la sessió</a>
     <select *ngIf="autenticat" name="logout" id="logout">
       <option selected hidden>Hola, {{nomAutenticat}}</option>
@@ -41,7 +42,7 @@
 </div>
 <hr>
 
-
+<div #fons>
 <h1>Avís Legal i Política de Privacitat</h1>
 <ol>
   <li><strong>INFORMACIÓ GENERAL</strong></li>
@@ -179,7 +180,7 @@
 <p><strong>VII. ACCIONS LEGALS, LEGISLACIÓ APLICABLE I JURISDICCIÓ</strong></p>
 <p>book.net es reserva la facultat de presentar les accions civils o penals que consideri necessàries per la utilització indeguda del Lloc Web i Continguts, o per l’incompliment de les presents Condicions.</p>
 <p>La relació entre l’Usuari i book.net es regirà per la normativa vigent i d’aplicació al territori espanyol. Si sorgeix qualsevol controvèrsia en relació amb la interpretació i/o l’aplicació d’aquestes Condicions, les parts sotmetran els seus conflictes a la jurisdicció ordinària sotmetent-se als jutges i tribunals que corresponguin conforme a dret.</p>
-
+</div>
 <footer>
   <iframe src="assets/html/Footer.html"></iframe>
 </footer>

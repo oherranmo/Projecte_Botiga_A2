@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import {RegisterLoginService} from "../register-login.service";
 
 @Component({
@@ -6,9 +6,23 @@ import {RegisterLoginService} from "../register-login.service";
   templateUrl: './contacte.component.html',
   styleUrls: ['./contacte.component.css', '../../assets/css/Default.css']
 })
-export class ContacteComponent {
+export class ContacteComponent implements AfterViewInit{
   autenticat = this.registraServei.autenticat
   nomAutenticat = this.registraServei.nomAutenticat
+  correuAutenticat = this.registraServei.correuAutenticat
+
+  // @ts-ignore
+  @ViewChild('omplenaCorreu') omplenaCorreu: ElementRef;
+  // @ts-ignore
+  @ViewChild('omplenaNom') omplenaNom: ElementRef;
+  ngAfterViewInit() {
+    if(this.autenticat){
+      this.omplenaNom.nativeElement.value = this.nomAutenticat;
+      this.omplenaCorreu.nativeElement.value = this.correuAutenticat;
+    }
+  }
+
+
 
   tancarSessio(){
     this.registraServei.autenticat = false;

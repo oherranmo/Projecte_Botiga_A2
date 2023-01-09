@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, Renderer2, ViewChild} from '@angular/core';
 import {RegisterLoginService} from "../register-login.service";
+import {elementAt} from "rxjs";
 
 @Component({
   selector: 'app-inici',
@@ -18,7 +19,7 @@ export class IniciComponent {
     console.log("funciona clic")
   }
 
-  constructor(private registraServei: RegisterLoginService) {
+  constructor(private registraServei: RegisterLoginService, private renderer: Renderer2) {
   }
 
 
