@@ -8,7 +8,6 @@ import {Product} from "./products";
 })
 export class CartService {
   items: Product[] = [];
-
   constructor(private http: HttpClient) {}
 
   addToCart(product: Product) {
@@ -26,6 +25,10 @@ export class CartService {
   }
   removeItem(index: any){
     this.items.splice(index, 1);
+  }
+  setCartData(data:any){
+    localStorage.setItem('cart', JSON.stringify(data))
+
   }
 
 }

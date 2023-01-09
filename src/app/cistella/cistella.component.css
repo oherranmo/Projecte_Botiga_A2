@@ -18,10 +18,15 @@ aside {
   padding-right: 20%;
 }
 
+
 button {
   border-color: white;
   color: white;
 }
+.back{
+  width: 15%;
+}
+
 input{
   color: white;
 }
@@ -30,3 +35,7 @@ p{
   color: white;
 }
 
+.qty{
+  width: 10%;
+  margin-left: 10%;
+}

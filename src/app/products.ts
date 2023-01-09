@@ -1,66 +1,66 @@
 export interface Product {
-  id: number;
   name: string;
   desc: string;
   preu: number;
   img: string;
+  qty: number;
 }
 
 export const products= [
   {
-    id: 1,
     name:"Bola de drac",
     desc:"Primera edicio",
     preu: 10.30,
-    img: "assets/images/BolaDeDrac01.jpg"
+    img: "assets/images/BolaDeDrac01.jpg",
+    qty: 1,
   },
   {
-    id: 2,
     name:"Narnia",
     desc:"Primera edicio",
     preu: 11.30,
-    img: "assets/images/Narnia.jpg"
+    img: "assets/images/Narnia.jpg",
+    qty: 1,
   },
   {
-    id: 3,
     name:"Boku no Hero Academia",
     desc:"Primera edicio",
     preu: 7.55,
-    img: "assets/images/BNHA.png"
+    img: "assets/images/BNHA.png",
+    qty: 1,
   },
   {
-    id: 4,
     name:"Los pilares de la Tierra",
     desc:"Primera edicio",
     preu: 11.30,
-    img: "assets/images/PilaresTierra.png"
+    img: "assets/images/PilaresTierra.png",
+    qty: 1,
   },
   {
-    id: 5,
     name:"Guia Basica de Minecraft",
     desc:"",
     preu: 15.89,
-    img: "assets/images/GuiaMine.png"
+    img: "assets/images/GuiaMine.png",
+    qty: 1,
   },
   {
-    id: 6,
     name:"La cocina de la abuela",
     desc:"",
     preu: 18.30,
-    img: "assets/images/LlibreCuina.png"
+    img: "assets/images/LlibreCuina.png",
+    qty: 1,
   },
   {
-    id: 7,
     name:"El señor de los anillos",
     desc:"Primera edicio",
     preu: 17.95,
-    img: "assets/images/SeñorAnillos.jpg"
+    img: "assets/images/SeñorAnillos.jpg",
+    qty: 1,
   },
   {
-    id: 8,
     name:"Como provocar un incendio",
     desc:"",
     preu: 9.49,
-    img: "assets/images/ComoIncendiar.jpg"
+    img: "assets/images/ComoIncendiar.jpg",
+    qty: 1,
   }
 ];

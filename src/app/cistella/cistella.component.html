@@ -46,12 +46,16 @@
 <article>
 
   <h4 *ngIf="items.length === 0">
-   <p>No tents cap producte.<a routerLink="/cataleg">Torna al cataleg</a></p>
+   <p>No tents cap producte.<p>
+    <button class="back" routerLink="/cataleg"> Torna al cataleg</button></p>
   </h4>
 
   <div class="producte" *ngFor="let item of items; let i = index">
     <img src="{{item.img}}" alt="" class="img-pro"> <br>
-    <h3>{{ item.name }} <br> {{item.preu}} € </h3>
+    <h3>{{ item.name }} </h3>
+    <h2>
+      {{item.preu * item.qty}} € <input type="number" class="qty" [value]="item.qty" (blur)="validateInput($event,i)">
+    </h2>
     <button (click)="delete(i)">DELETE</button>
   </div>
 
@@ -83,7 +87,7 @@
   <input type="radio" id="opcio3" name="enviament" value="En el mateix dia">
   <label for="opcio3">En el mateix dia</label>
   <h3>Preu total:</h3>
-  <h2> 0 €</h2>
+  <h2> {{ calcTotal() }} € </h2>
   <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
     <button class="button" type="submit">Finalitzar compra</button>
   </form>

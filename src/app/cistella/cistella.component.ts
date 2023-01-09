@@ -11,9 +11,7 @@ import { CartService } from '../cistella.service';
 })
 export class CistellaComponent {
   items = this.cartService.getItems();
-
   checkoutForm = this.formBuilder.group({});
-
   autenticat = this.registraServei.autenticat
   nomAutenticat = this.registraServei.nomAutenticat
   cognomsAutenticat = this.registraServei.cognomsAutenticat
@@ -31,6 +29,7 @@ export class CistellaComponent {
   private cartService: CartService,
   private formBuilder: FormBuilder) {
   }
+
   onSubmit(): void {
     // Process checkout data here
     this.items = this.cartService.clearItems();
@@ -39,5 +38,27 @@ export class CistellaComponent {
   }
   delete(index: number) {
     this.cartService.removeItem(index);
+  }
+
+  validateInput(event:any, i:number){
+    const qty = +event.target.value;
+    if (qty < 1){
+      event.target.value = this.items[i].qty;
+      return;
+    }
+    this.QtyUpdated(qty, i)
+  }
+  private QtyUpdated(qty:number, i:number){
+    this.items[i].qty = qty;
+
+    this.cartService.setCartData(this.items)
+  }
+
+  public calcTotal():number{
+    let total:number = 0;
+    for(let item of this.items){
+      total += (item.qty * item.preu);
+    }
+    return total;
   }
 }
