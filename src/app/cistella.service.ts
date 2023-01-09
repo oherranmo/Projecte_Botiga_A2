@@ -2,10 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Product} from "./products";
 
-export type ShippingPrice = {
-  type: string;
-  price: number;
-};
 
 @Injectable({
   providedIn: 'root',
@@ -28,4 +24,8 @@ export class CartService {
 
     return this.items;
   }
+  removeItem(index: any){
+    this.items.splice(index, 1);
+  }
+
 }
