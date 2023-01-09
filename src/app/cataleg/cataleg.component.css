@@ -1,0 +1,30 @@
+
+.producte{
+  float: left;
+  color: white;
+  width: 350px
+}
+
+.img-pro{
+  height: 60%;
+  width: 60%;
+}
+
+.preu-quantitat{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.BotoCompra{
+  display: flex;
+  flex-direction: row;
+  color:white;
+}
+
+.BotoCompra:hover{
+  color:green;
+
+}
+
