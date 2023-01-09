@@ -13,7 +13,6 @@ export type ShippingPrice = {
 export class CartService {
   items: Product[] = [];
 
-
   constructor(private http: HttpClient) {}
 
   addToCart(product: Product) {
@@ -28,9 +27,5 @@ export class CartService {
     this.items = [];
 
     return this.items;
-  }
-
-  getShippingPrices() {
-    return this.http.get<ShippingPrice[]>('/assets/shipping.json');
   }
 }

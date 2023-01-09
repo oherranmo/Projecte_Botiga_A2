@@ -52,7 +52,7 @@
   <div class="producte" *ngFor="let item of items">
     <img src="{{item.img}}" alt="" class="img-pro"> <br>
     <h3>{{ item.name }} <br> {{item.preu}} € </h3>
-    <button (click)="delete(item)">DELETE</button>
+    <button (click)="delete(deleteItem$)">DELETE</button>
   </div>
 
 </article>

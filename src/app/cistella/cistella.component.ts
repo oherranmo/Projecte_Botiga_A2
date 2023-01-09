@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import {RegisterLoginService} from "../register-login.service";
 import { FormBuilder } from '@angular/forms';
 import { CartService } from '../cistella.service';
-import {Observable, Subject} from "rxjs";
+import {Subject} from "rxjs";
+
 
 @Component({
   selector: 'app-cistella',
@@ -10,7 +11,7 @@ import {Observable, Subject} from "rxjs";
   styleUrls: ['./cistella.component.css','../../assets/css/Default.css']
 })
 export class CistellaComponent {
-  deleteItem$ = new Subject<{ id: string }>();
+  deleteItem$ = new Subject<{ product: string }>();
   items = this.cartService.getItems();
 
   checkoutForm = this.formBuilder.group({
@@ -33,6 +34,7 @@ export class CistellaComponent {
   private cartService: CartService,
   private formBuilder: FormBuilder) {
   }
+  ngOnInit(){}
   onSubmit(): void {
     // Process checkout data here
     this.items = this.cartService.clearItems();
@@ -40,6 +42,6 @@ export class CistellaComponent {
     this.checkoutForm.reset();
   }
   delete(item: any) {
-    this.deleteItem$.next({ id: item.id });
-    }
+    this.deleteItem$.next({ product: item.name });
+  }
 }
