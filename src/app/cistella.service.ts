@@ -28,7 +28,6 @@ export class CartService {
   }
   setCartData(data:any){
     localStorage.setItem('cart', JSON.stringify(data))
-
   }
 
 }

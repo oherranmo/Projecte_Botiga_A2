@@ -32,3 +32,8 @@
   border-color: green;
 }
 
+li{
+  display: inline;
+  color: white;
+}
+

@@ -41,6 +41,21 @@
   </nav>
 </div>
 <hr>
+<div class="filtres">
+  <ul>
+    <li>
+      <input type="checkbox"> Tots els llibres
+    </li>
+    <li>
+      <input type="checkbox"> Entreteniment
+    </li>
+    <li>
+      <input type="checkbox"> Manuals
+    </li>
+  </ul>
+
+</div>
+
 <div *ngFor="let product of products" class="producte">
   <h3>
     <div *ngIf="product">
