@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {RegisterLoginService} from "../register-login.service";
 import { Product, products } from '../products';
 import { CartService } from '../cistella.service';
@@ -9,10 +9,34 @@ import { CartService } from '../cistella.service';
   styleUrls: ['./cataleg.component.css','../../assets/css/Default.css']
 })
 
-export class CatalegComponent implements OnInit {
+export class CatalegComponent  {
   products = products;
   autenticat = this.registraServei.autenticat
   nomAutenticat = this.registraServei.nomAutenticat
+  clicatE: any;
+  clicatM: any;
+
+  // @ts-ignore
+  @ViewChild('manual') manual: ElementRef;
+  // @ts-ignore
+  @ViewChild('entretenir') entretenir: ElementRef;
+  catEntretenir(){
+    if(this.clicatE){
+      this.render.removeClass(this.entretenir.nativeElement,'entrete')
+    }
+    else(this.render.addClass(this.entretenir.nativeElement,'entrete'))
+  }
+
+  catManuals(){
+    if(this.clicatM){
+      this.render.removeClass(this.manual.nativeElement,'manu')
+
+    }
+    else(this.render.addClass(this.manual.nativeElement,'manu'))
+  }
+
+
+
 
   tancarSessio() {
     this.registraServei.autenticat = false;
@@ -22,12 +46,13 @@ export class CatalegComponent implements OnInit {
     console.log("funciona clic")
   }
   constructor(private registraServei: RegisterLoginService,
-              private cartService: CartService) {
+              private cartService: CartService, private render: Renderer2) {
   }
-  ngOnInit(){
-  }
+
+
   addToCart(product: Product) {
     this.cartService.addToCart(product);
     window.alert(`${product.name} s'ha afegit a la cistella.`);
   }
+
 }

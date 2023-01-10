@@ -4,6 +4,7 @@ export interface Product {
   preu: number;
   img: string;
   qty: number;
+  cat: string;
 }
 
 export const products= [
@@ -13,6 +14,7 @@ export const products= [
     preu: 10.30,
     img: "assets/images/BolaDeDrac01.jpg",
     qty: 1,
+    cat: "Entreteniment"
   },
   {
     name:"Narnia",
@@ -20,6 +22,7 @@ export const products= [
     preu: 11.30,
     img: "assets/images/Narnia.jpg",
     qty: 1,
+    cat: "Entreteniment"
   },
   {
     name:"Boku no Hero Academia",
@@ -27,6 +30,7 @@ export const products= [
     preu: 7.55,
     img: "assets/images/BNHA.png",
     qty: 1,
+    cat: "Entreteniment"
   },
   {
     name:"Los pilares de la Tierra",
@@ -34,6 +38,7 @@ export const products= [
     preu: 11.30,
     img: "assets/images/PilaresTierra.png",
     qty: 1,
+    cat: "Entreteniment"
   },
   {
     name:"Guia Basica de Minecraft",
@@ -41,6 +46,7 @@ export const products= [
     preu: 15.89,
     img: "assets/images/GuiaMine.png",
     qty: 1,
+    cat: "Manuals"
   },
   {
     name:"La cocina de la abuela",
@@ -48,6 +54,7 @@ export const products= [
     preu: 18.30,
     img: "assets/images/LlibreCuina.png",
     qty: 1,
+    cat: "Manuals"
   },
   {
     name:"El señor de los anillos",
@@ -55,6 +62,7 @@ export const products= [
     preu: 17.95,
     img: "assets/images/SeñorAnillos.jpg",
     qty: 1,
+    cat: "Entreteniment"
   },
   {
     name:"Como provocar un incendio",
@@ -62,5 +70,6 @@ export const products= [
     preu: 9.49,
     img: "assets/images/ComoIncendiar.jpg",
     qty: 1,
+    cat: "Manuals"
   }
 ];
